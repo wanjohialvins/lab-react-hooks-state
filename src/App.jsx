@@ -31,8 +31,8 @@ const App = () => {
 
         <section className="intro">
           <p>
-            Welcome! Your task is to implement filtering, cart management, and dark
-            mode.
+            Explore our curated selection of fresh produce and dairy. Enjoy a seamless
+            shopping experience with real-time filtering and theme customization.
           </p>
         </section>
 
