@@ -14,20 +14,22 @@ const ProductList = ({ category, onAddToCart }) => {
       : sampleProducts.filter((p) => p.category === category)
 
   return (
-    <div>
-      <h2>Available Products</h2>
+    <div className="product-list-container">
+      <h2 className="section-title">Available Products</h2>
 
-      {filteredProducts.length > 0 ? (
-        filteredProducts.map((product) => (
-          <ProductCard
-            key={product.id}
-            product={product}
-            onAddToCart={onAddToCart}
-          />
-        ))
-      ) : (
-        <p>No products available</p>
-      )}
+      <div className="product-grid">
+        {filteredProducts.length > 0 ? (
+          filteredProducts.map((product) => (
+            <ProductCard
+              key={product.id}
+              product={product}
+              onAddToCart={onAddToCart}
+            />
+          ))
+        ) : (
+          <p className="no-products">No products available</p>
+        )}
+      </div>
     </div>
   )
 }
